@@ -1,0 +1,451 @@
+/* 1. VARIÁVEIS E CONFIGURAÇÕES GERAIS */
+:root {
+    --cor-primaria: #23ad11;
+    /* Verde Institucional */
+    --cor-primaria-clara: #f1f8e9;
+    --cor-secundaria: #ffd700;
+    /* Amarelo de destaque */
+    --fonte-principal: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    overflow-x: hidden;
+    /* Evita barra de rolagem lateral indesejada */
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 2. CABEÇALHO (HEADER) - CORRIGIDO E RESPONSIVO */
+.header-principal {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    /* Permite quebrar linha em telas pequenas */
+}
+
+.logo-img {
+    width: 180px;
+    height: auto;
+    max-height: 100px;
+    display: block;
+    object-fit: contain;
+}
+
+.navegacao ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 20px;
+}
+
+.navegacao a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.navegacao a:hover {
+    color: var(--cor-primaria);
+}
+
+.btn-portal {
+    background-color: var(--cor-primaria);
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: 25px;
+    white-space: nowrap;
+}
+
+.btn-portal:hover {
+    background-color: var(--cor-secundaria);
+    color: #000 !important;
+}
+
+/* 3. HERO SECTION (BANNER) */
+.hero {
+    background-image: url('imagemfrenteescola.png');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-conteudo h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    padding: 0 10px;
+}
+
+.btn-saiba-mais {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: var(--cor-secundaria);
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-saiba-mais:hover {
+    transform: scale(1.05);
+}
+
+/* 4. SEÇÕES GERAIS E CARDS */
+.secao {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.secao-cinza {
+    background-color: #f4f7f6;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.grid-servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease; /* Transição suave para todas as mudanças */
+    cursor: default;
+    border-bottom: 5px solid transparent; /* Reserva o espaço para a borda não "pular" */
+}
+
+/* Efeito ao Passar o Mouse (Hover) */
+.card:hover {
+    transform: translateY(-10px); /* O card sobe levemente */
+    border-bottom: 5px solid var(--cor-secundaria); /* A barra amarela aparece */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* A sombra aumenta, dando profundidade */
+    background-color: var(--cor-primaria-clara); /* Opcional: muda levemente o fundo */
+}
+
+/* 5. TURMAS E BILHETES */
+.container-turno {
+    margin-bottom: 100px;
+    /* Distância entre os turnos */
+    text-align: left;
+}
+
+.titulo-turno {
+    color: var(--cor-primaria);
+    border-bottom: 2px solid #ddd;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+.grid-turmas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 12px;
+}
+
+.btn-turma {
+    cursor: pointer;
+    font-family: inherit;
+    background: white;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-turma:hover {
+    background-color: var(--cor-primaria);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid-avisos {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card-aviso {
+    background: white;
+    border-left: 5px solid var(--cor-primaria);
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0 8px 8px 0;
+}
+
+.data-aviso {
+    font-size: 0.8rem;
+    color: #888;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+/* 6. MODAL DE AVISOS */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-conteudo {
+    background-color: white;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    border-top: 8px solid var(--cor-primaria);
+    text-align: left;
+}
+
+.fechar {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #888;
+}
+
+.bilhete-item {
+    background: var(--cor-primaria-clara);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    border-left: 4px solid var(--cor-primaria);
+}
+
+/* 7. GALERIA */
+.bloco-galeria {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.bloco-galeria.inverter {
+    flex-direction: row-reverse;
+}
+
+.galeria-imagem img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 10px 10px 0px var(--cor-primaria);
+}
+
+/* 8. RESPONSIVIDADE (MOBILE FIRST) */
+@media (max-width: 768px) {
+    .container-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navegacao ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .hero-conteudo h1 {
+        font-size: 2.2rem;
+    }
+
+    .bloco-galeria,
+    .bloco-galeria.inverter {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .galeria-imagem img {
+        height: 250px;
+    }
+
+    .grid-turmas {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+
+    .container-turno {
+        margin-bottom: 60px;
+    }
+}
+
+/* --- RODAPÉ --- */
+.rodape {
+    background-color: #333;
+    /* Fundo escuro para contraste */
+    color: #fff;
+    padding: 60px 0 0 0;
+    margin-top: 80px;
+}
+
+.container-rodape {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.logo-rodape {
+    width: 210px;
+    filter: brightness(0) invert(1);
+    /* Deixa a logo branca para o fundo escuro */
+    margin-bottom: 20px;
+}
+
+.rodape-info p {
+    color: #ccc;
+    font-size: 0.85rem;
+    max-width: 300px;
+}
+
+.rodape h4 {
+    color: var(--cor-secundaria);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.rodape-links ul {
+    list-style: none;
+}
+
+.rodape-links ul li {
+    margin-bottom: 10px;
+}
+
+.rodape-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.rodape-links a:hover {
+    color: #fff;
+    padding-left: 5px;
+}
+
+.icones-sociais a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #444;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.icones-sociais a:hover {
+    background: var(--cor-primaria);
+    /* Verde no hover */
+}
+
+/* --- BARRA DE CRÉDITOS --- */
+.direitos-autorais {
+    background-color: #222;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.8rem;
+    border-top: 1px solid #444;
+}
+
+.dev-credito {
+    margin-top: 5px;
+    color: #888;
+}
+
+.dev-credito strong {
+    color: var(--cor-primaria);
+}
+
+/* Responsividade do Rodapé */
+@media (max-width: 768px) {
+    .container-rodape {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .rodape-info p {
+        margin: 0 auto;
+    }
+}

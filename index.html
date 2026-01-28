@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola Municipal Dom Bosco</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <link rel="icon" type="image/png" href="">
+</head>
+
+<body>
+
+    <header class="header-principal">
+        <div class="container-header">
+            <div class="logo">
+                <a href="#inicio">
+                    <img src="logo.emdb.png" alt="Logo Escola Dom Bosco" class="logo-img">
+                </a>
+            </div>
+            <nav class="navegacao">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#quemsomos">Quem Somos</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#avisos">Avisos</a></li>
+                    <li><a href="#contatos">Contato</a></li>
+                    <li><a href="#portal" class="btn-portal">Portal do Aluno</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-overlay">
+            <div class="hero-conteudo">
+                <h1>Escola Municipal Dom Bosco</h1>
+                <p>Uma história de fé, solidariedade e educação</p>
+                <a href="#quemsomos" class="btn-saiba-mais">Conheça nossa história</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="quemsomos" class="secao">
+        <div class="container">
+            <h2>Quem Somos</h2>
+            <p class="sobre-paragrafo">
+                Uma escola de Ensino Fundamental da rede municipal de Belo Horizonte, comprometida com a formação
+                integral de nossos alunos.
+            </p>
+            <div class="diretoria">
+                <p><strong>Diretora:</strong> Anna Eliza Oliveira</p>
+                <p><strong>Vice:</strong> Zayran Teixeira</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="secao-cinza">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="grid-servicos">
+                <div class="card">
+                    <div class="card-icone">📚</div>
+                    <h3>Ensino Fundamental</h3>
+                    <p>Foco na excelência acadêmica e desenvolvimento humano.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icone">💻</div>
+                    <h3>Laboratório de informática</h3>
+                    <p>Espaço equipado para o desenvolvimento do
+                        pensamento computacional e inclusão digital dos estudantes</p>
+                </div>
+                <div class="card">
+                    <div class="card-icone">📖</div>
+                    <h3>Biblioteca</h3>
+                    <p>Um vasto acervo para incentivar o hábito da leitura e apoiar
+                        pesquisas acadêmicas de todas as turmas.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icone">🎭</div>
+                    <h3>Auditório Multiuso</h3>
+                    <p>Ambiente destinado a palestras, apresentações culturais e eventos que integram
+                        a escola e a comunidade.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icone">🏀</div>
+                    <h3>Escola Integrada</h3>
+                    <p>Atividades complementares que integram e educam.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icone">🤝</div>
+                    <h3>Projetos Sociais</h3>
+                    <p>Ações de solidariedade que transformam a comunidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="comunicados" class="secao-cinza">
+        <div class="container">
+            <h2>Avisos e Bilhetes Gerais</h2>
+            <p>Fique por dentro das comunicações semanais da escola.</p>
+
+            <div class="grid-avisos">
+                <div class="card-aviso">
+                    <span class="data-aviso">26 à 28 Jan 2026</span>
+                    <h3>Escola nas Férias</h3>
+                    <p>Informamos que o Programa Escola nas Férias acontecerá nos dias 26, 27 e 28.
+                        A inscrição deve ser feita na secretaria entre os dias 05/01 e 20/01 de 8h às 11h.</p>
+                </div>
+            </div>
+    </section>
+
+    <section id="avisos" class="secao-cinza">
+        <div class="container">
+            <h2>Bilhetes por Turma</h2>
+            <p>Selecione a turma para visualizar as comunicações diárias.</p>
+
+            <div class="container-turno">
+                <h3 class="titulo-turno">☀️ Turno da Manhã</h3>
+                <div class="grid-turmas">
+                    <button class="btn-turma" onclick="abrirLogin('406')">406</button>
+                    <button class="btn-turma" onclick="abrirLogin('407')">407</button>
+                    <button class="btn-turma" onclick="abrirLogin('415')">415</button>
+
+                    <button class="btn-turma" onclick="abrirLogin('416')">416</button>
+                    <button class="btn-turma" onclick="abrirLogin('512')">512</button>
+                    <button class="btn-turma" onclick="abrirLogin('513')">513</button>
+
+                    <button class="btn-turma" onclick="abrirLogin('514')">514</button>
+                    <button class="btn-turma" onclick="abrirLogin('601')">601</button>
+                    <button class="btn-turma" onclick="abrirLogin('602')">602</button>
+
+                    <button class="btn-turma" onclick="abrirLogin('603')">603</button>
+                    <button class="btn-turma" onclick="abrirLogin('704')">704</button>
+                    <button class="btn-turma" onclick="abrirLogin('705')">705</button>
+
+                    <button class="btn-turma" onclick="abrirLogin('809')">809</button>
+                    <button class="btn-turma" onclick="abrirLogin('811')">811</button>
+                    <button class="btn-turma" onclick="abrirLogin('908')">908</button>
+                    <button class="btn-turma" onclick="abrirLogin('910')">910</button>
+                </div>
+            </div>
+
+            <div class="container-turno">
+                <h3 class="titulo-turno">🌤️ Turno da Tarde</h3>
+                <div class="grid-turmas">
+                    <button class="btn-turma" onclick="abrirLogin('112')">112</button>
+                    <button class="btn-turma" onclick="abrirLogin('113')">113</button>
+                    <button class="btn-turma" onclick="abrirLogin('114')">114</button>
+
+                    <button class="btn-turma" onclick="abrirLogin('205')">205</button>
+                    <button class="btn-turma" onclick="abrirLogin('206')">206</button>
+                    <button class="btn-turma" onclick="abrirLogin('207')">207</button>
+
+                    <button class="btn-turma" onclick="abrirLogin('304')">304</button>
+                    <button class="btn-turma" onclick="abrirLogin('315')">315</button>
+                    <button class="btn-turma" onclick="abrirLogin('316')">316</button>
+
+                    <button class="btn-turma" onclick="abrirLogin('601 (Tarde)')">601</button>
+                    <button class="btn-turma" onclick="abrirLogin('602 (Tarde)')">602</button>
+                    <button class="btn-turma" onclick="abrirLogin('709')">709</button>
+                    <button class="btn-turma" onclick="abrirLogin('710')">710</button>
+                    <button class="btn-turma" onclick="abrirLogin('803')">803</button>
+                    <button class="btn-turma" onclick="abrirLogin('908 (Tarde)')">908</button>
+                    <button class="btn-turma" onclick="abrirLogin('911')">911</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </div>
+    </section>
+
+    <div id="modalBilhetes" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar" onclick="fecharModal()">&times;</span>
+            <h2 id="tituloTurma">Turma 000</h2>
+            <p class="sub-aviso">Confira os avisos e bilhetes diários abaixo:</p>
+
+            <div id="listaBilhetes" class="lista-avisos">
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="rodape">
+        <div class="container container-rodape">
+            <div class="rodape-info">
+                <img src="logo.emdb.png" alt="Logo Escola Dom Bosco" class="logo-rodape">
+                <p>Educação de qualidade e compromisso com o futuro da nossa comunidade.</p>
+            </div>
+
+            <div class="rodape-contatos">
+                <h4>Contatos</h4>
+                <ul>
+                    <li><strong>📞 Telefone:</strong> <a href="tel:31988883295">(31) 98888-3295</a></li>
+                    <li><strong>✉️ E-mail:</strong> <a href="mailto:emdb@edu.pbh.gov.br">emdb@edu.pbh.gov.br</a></li>
+                    <li>
+                        <strong>📍 Endereço:</strong>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Escola+Municipal+Dom+Bosco+Rua+Bicuiba+100+Belo+Horizonte"
+                            target="_blank" rel="noopener noreferrer">
+                            Rua Bicuíba, 100 – Dom Bosco, Belo Horizonte - MG
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="rodape-social">
+                <h4>Siga-nos</h4>
+                <div class="icones-sociais">
+                    <a href="https://www.facebook.com/people/Escola-Municipal-Dom-Bosco/100057627992665/"
+                        target="_blank" rel="noopener noreferrer" title="Facebook">FB</a>
+                    <a href="https://www.instagram.com/emdb.bh/" target="_blank" rel="noopener noreferrer"
+                        title="Instagram">IG</a>
+                    <a href="URL_DO_YOUTUBE" target="_blank" rel="noopener noreferrer" title="YouTube">YT</a>
+                </div>
+            </div>
+        </div>
+        <div class="direitos-autorais">
+            <div class="container">
+                <p>&copy; 2026 Escola Municipal Dom Bosco. Todos os direitos reservados.</p>
+                <p class="dev-credito">Desenvolvido por <strong>Davi Bicalho de Lima</strong> - Desenvolvedor Full Stack
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
