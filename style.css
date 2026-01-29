@@ -24,7 +24,6 @@ body {
     color: #333;
     background-color: #fff;
     overflow-x: hidden;
-    /* Evita barra de rolagem lateral indesejada */
 }
 
 .container {
@@ -79,19 +78,6 @@ body {
 
 .navegacao a:hover {
     color: var(--cor-primaria);
-}
-
-.btn-portal {
-    background-color: var(--cor-primaria);
-    color: #fff !important;
-    padding: 10px 20px;
-    border-radius: 25px;
-    white-space: nowrap;
-}
-
-.btn-portal:hover {
-    background-color: var(--cor-secundaria);
-    color: #000 !important;
 }
 
 /* 3. HERO SECTION (BANNER) */
@@ -166,23 +152,22 @@ body {
     padding: 40px 20px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    transition: all 0.3s ease; /* Transição suave para todas as mudanças */
+    transition: all 0.3s ease; 
     cursor: default;
-    border-bottom: 5px solid transparent; /* Reserva o espaço para a borda não "pular" */
+    border-bottom: 5px solid transparent; 
 }
 
-/* Efeito ao Passar o Mouse (Hover) */
+
 .card:hover {
-    transform: translateY(-10px); /* O card sobe levemente */
-    border-bottom: 5px solid var(--cor-secundaria); /* A barra amarela aparece */
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* A sombra aumenta, dando profundidade */
-    background-color: var(--cor-primaria-clara); /* Opcional: muda levemente o fundo */
+    transform: translateY(-10px); 
+    border-bottom: 5px solid var(--cor-secundaria); 
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15); 
+    background-color: var(--cor-primaria-clara); 
 }
 
 /* 5. TURMAS E BILHETES */
 .container-turno {
     margin-bottom: 100px;
-    /* Distância entre os turnos */
     text-align: left;
 }
 
@@ -229,6 +214,7 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 30px;
+    
 }
 
 .card-aviso {
@@ -311,46 +297,78 @@ body {
     box-shadow: 10px 10px 0px var(--cor-primaria);
 }
 
-/* 8. RESPONSIVIDADE (MOBILE FIRST) */
 @media (max-width: 768px) {
+    /* Ajustes Gerais */
+    .secao, .secao-cinza {
+        padding: 40px 0; /* Diminuído de 80px para 40px para economizar tela */
+    }
+
+    /* Cabeçalho Compacto */
     .container-header {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .logo-img {
+        width: 140px; /* Logo menor no celular */
     }
 
     .navegacao ul {
-        flex-wrap: wrap;
+        gap: 8px;
         justify-content: center;
-        gap: 10px;
+    }
+
+    .navegacao a {
+        font-size: 0.75rem; /* Fonte menor para caber em uma linha */
+    }
+
+    .btn-portal {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+
+    /* Banner (Hero) */
+    .hero {
+        height: 50vh; /* Banner mais baixo no celular */
     }
 
     .hero-conteudo h1 {
-        font-size: 2.2rem;
+        font-size: 1.8rem; /* Título mais equilibrado */
     }
 
-    .bloco-galeria,
-    .bloco-galeria.inverter {
-        flex-direction: column;
-        text-align: center;
+    /* Grid de Serviços e Avisos */
+    .grid-servicos {
+        grid-template-columns: 1fr; /* Um card por linha */
+        gap: 15px;
     }
 
-    .galeria-imagem img {
-        height: 250px;
+    .card {
+        padding: 20px; /* Card menos "gordo" */
     }
 
+    /* Turmas */
     .grid-turmas {
-        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        grid-template-columns: repeat(4, 1fr); /* 4 botões por linha para não ficar gigante */
+        gap: 8px;
     }
 
-    .container-turno {
-        margin-bottom: 60px;
+    .btn-turma {
+        padding: 10px 5px;
+        font-size: 0.85rem;
+    }
+
+    /* Modal */
+    .modal-conteudo {
+        width: 95%;
+        margin: 20% auto;
+        padding: 20px;
     }
 }
 
 /* --- RODAPÉ --- */
 .rodape {
     background-color: #333;
-    /* Fundo escuro para contraste */
     color: #fff;
     padding: 60px 0 0 0;
     margin-top: 80px;
@@ -402,18 +420,24 @@ body {
 }
 
 .icones-sociais a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
+    display: inline-flex; /* Melhor para centralizar ícones */
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
     background: #444;
     color: #fff;
-    text-align: center;
-    line-height: 40px;
     border-radius: 50%;
     margin-right: 10px;
     text-decoration: none;
-    transition: 0.3s;
+    font-size: 1.2rem; /* Tamanho do ícone */
+    transition: 0.3s ease;
 }
+
+
+.icones-sociais a[title="Facebook"]:hover { background: #1877F2; }
+.icones-sociais a[title="Instagram"]:hover { background: #E4405F; }
+.icones-sociais a[title="WhatsApp"]:hover { background: #25D366; }
 
 .icones-sociais a:hover {
     background: var(--cor-primaria);
@@ -438,6 +462,15 @@ body {
     color: var(--cor-primaria);
 }
 
+/* REMOVER AZUL E SUBLINHADO AUTOMÁTICO */
+.rodape-contatos a, 
+.rodape-contatos a[href^="tel"], 
+.rodape-contatos a[href^="mailto"] {
+    color: var(--cor-secundaria) !important;
+    text-decoration: none !important;
+    transition: 0.3s;
+}
+
 /* Responsividade do Rodapé */
 @media (max-width: 768px) {
     .container-rodape {
@@ -448,4 +481,39 @@ body {
     .rodape-info p {
         margin: 0 auto;
     }
+   /* Estilo do Botão Voltar ao Topo */
+#btnTopo {
+    display: none; /* Começa escondido */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    border: none;
+    outline: none;
+    background-color: var(--cor-primaria); /* O verde da escola */
+    color: white;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#btnTopo:hover {
+    background-color: var(--cor-secundaria); /* Amarelo no hover */
+    color: #000;
+    transform: translateY(-5px); /* Efeito de levitação */
+}
+
+/* Ajuste para celular para não tampar conteúdo importante */
+@media (max-width: 768px) {
+    #btnTopo {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+}
 }

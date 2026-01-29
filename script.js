@@ -1,4 +1,4 @@
-// Este é o seu "banco de dados" de bilhetes. 
+// banco de dados de bilhetes 
 // Para mudar um aviso, basta alterar o texto entre as aspas.
 const bancoDeAvisos = {
     // --- TURNO DA MANHÃ ---
@@ -63,6 +63,35 @@ function abrirLogin(idTurma) {
     modal.style.display = "block";
 }
 
+// Objeto para facilitar a troca semanal do aviso geral
+const avisoGeralSemana = {
+    titulo: "Escola nas Férias",
+    data: "26 à 28 Jan 2026",
+    texto: "Informamos que o Programa Escola nas Férias acontecerá nos dias 26, 27 e 28. A inscrição deve ser feita na secretaria entre os dias 05/01 e 20/01 de 8h às 11h."
+};
+
+function carregarAvisoNoCard() {
+    document.getElementById('dataGeral').innerText = avisoGeralSemana.data;
+    document.getElementById('tituloGeral').innerText = avisoGeralSemana.titulo;
+}
+
+function abrirAvisoGeral() {
+    const modal = document.getElementById('modalBilhetes');
+    const titulo = document.getElementById('tituloTurma');
+    const lista = document.getElementById('listaBilhetes');
+
+    titulo.innerText = avisoGeralSemana.titulo;
+    lista.innerHTML = `
+        <div class="bilhete-item">
+            <small>Válido para: ${avisoGeralSemana.data}</small>
+            <p>${avisoGeralSemana.texto}</p>
+        </div>
+    `;
+    modal.style.display = "block";
+}
+
+carregarAvisoNoCard();
+
 // 3. FUNÇÕES DE APOIO (Fechar o Modal)
 function fecharModal() {
     document.getElementById('modalBilhetes').style.display = "none";
@@ -73,5 +102,25 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+}
+
+// botao para voltar ao topo
+const botaoTopo = document.getElementById("btnTopo");
+
+// Mostrar botao apos 300px
+window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        botaoTopo.style.display = "block";
+    } else {
+        botaoTopo.style.display = "none";
+    }
+};
+
+// Função para voltar ao topo suavemente
+function voltarAoTopo() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 }
 

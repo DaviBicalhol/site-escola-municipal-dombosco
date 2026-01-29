@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escola Municipal Dom Bosco</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
     <link rel="icon" type="image/png" href="">
@@ -27,8 +28,6 @@
                     <li><a href="#servicos">Serviços</a></li>
                     <li><a href="#avisos">Avisos</a></li>
                     <li><a href="#contatos">Contato</a></li>
-                    <li><a href="#portal" class="btn-portal">Portal do Aluno</a></li>
-
                 </ul>
             </nav>
         </div>
@@ -105,15 +104,15 @@
             <p>Fique por dentro das comunicações semanais da escola.</p>
 
             <div class="grid-avisos">
-                <div class="card-aviso">
-                    <span class="data-aviso">26 à 28 Jan 2026</span>
-                    <h3>Escola nas Férias</h3>
-                    <p>Informamos que o Programa Escola nas Férias acontecerá nos dias 26, 27 e 28.
-                        A inscrição deve ser feita na secretaria entre os dias 05/01 e 20/01 de 8h às 11h.</p>
+                <div class="card-aviso" onclick="abrirAvisoGeral()" style="cursor: pointer;">
+                    <span class="data-aviso" id="dataGeral">Carregando...</span>
+                    <h3 id="tituloGeral">Carregando...</h3>
+                    <p>Clique aqui para ler o comunicado completo.</p>
+                    <small style="color: var(--cor-primaria); font-weight: bold;">Ver mais +</small>
                 </div>
             </div>
+        </div>
     </section>
-
     <section id="avisos" class="secao-cinza">
         <div class="container">
             <h2>Bilhetes por Turma</h2>
@@ -210,24 +209,33 @@
             </div>
 
             <div class="rodape-social">
-                <h4>Siga-nos</h4>
+                <h4>Siga nossos canais</h4>
                 <div class="icones-sociais">
                     <a href="https://www.facebook.com/people/Escola-Municipal-Dom-Bosco/100057627992665/"
-                        target="_blank" rel="noopener noreferrer" title="Facebook">FB</a>
+                        target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
                     <a href="https://www.instagram.com/emdb.bh/" target="_blank" rel="noopener noreferrer"
-                        title="Instagram">IG</a>
-                    <a href="URL_DO_YOUTUBE" target="_blank" rel="noopener noreferrer" title="YouTube">YT</a>
+                        title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="https://wa.me/5531988883295" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
                 </div>
             </div>
-        </div>
-        <div class="direitos-autorais">
-            <div class="container">
-                <p>&copy; 2026 Escola Municipal Dom Bosco. Todos os direitos reservados.</p>
-                <p class="dev-credito">Desenvolvido por <strong>Davi Bicalho de Lima</strong> - Desenvolvedor Full Stack
-                </p>
+            <div class="direitos-autorais">
+                <div class="container">
+                    <p>&copy; 2026 Escola Municipal Dom Bosco. Todos os direitos reservados.</p>
+                    <p class="dev-credito">Desenvolvido por <strong>Davi Bicalho de Lima</strong></p>
+                </div>
             </div>
-        </div>
     </footer>
+    <button id="btnTopo" onclick="voltarAoTopo()" title="Voltar ao Topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
 
 </body>
