@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
-    <link rel="icon" type="image/png" href="">
 </head>
 
 <body>
@@ -33,158 +32,157 @@
         </div>
     </header>
 
-    <section id="inicio" class="hero">
-        <div class="hero-overlay">
-            <div class="hero-conteudo">
-                <h1>Escola Municipal Dom Bosco</h1>
-                <p>Uma história de fé, solidariedade e educação</p>
-                <a href="#quemsomos" class="btn-saiba-mais">Conheça nossa história</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="quemsomos" class="secao">
-        <div class="container">
-            <h2>Quem Somos</h2>
-            <p class="sobre-paragrafo">
-                Uma escola de Ensino Fundamental da rede municipal de Belo Horizonte, comprometida com a formação
-                integral de nossos alunos.
-            </p>
-            <div class="diretoria">
-                <p><strong>Diretora:</strong> Anna Eliza Oliveira</p>
-                <p><strong>Vice:</strong> Zayran Teixeira</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="servicos" class="secao-cinza">
-        <div class="container">
-            <h2>Nossos Serviços</h2>
-            <div class="grid-servicos">
-                <div class="card">
-                    <div class="card-icone">📚</div>
-                    <h3>Ensino Fundamental</h3>
-                    <p>Foco na excelência acadêmica e desenvolvimento humano.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icone">💻</div>
-                    <h3>Laboratório de informática</h3>
-                    <p>Espaço equipado para o desenvolvimento do
-                        pensamento computacional e inclusão digital dos estudantes</p>
-                </div>
-                <div class="card">
-                    <div class="card-icone">📖</div>
-                    <h3>Biblioteca</h3>
-                    <p>Um vasto acervo para incentivar o hábito da leitura e apoiar
-                        pesquisas acadêmicas de todas as turmas.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icone">🎭</div>
-                    <h3>Auditório Multiuso</h3>
-                    <p>Ambiente destinado a palestras, apresentações culturais e eventos que integram
-                        a escola e a comunidade.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icone">🏀</div>
-                    <h3>Escola Integrada</h3>
-                    <p>Atividades complementares que integram e educam.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icone">🤝</div>
-                    <h3>Projetos Sociais</h3>
-                    <p>Ações de solidariedade que transformam a comunidade.</p>
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-overlay">
+                <div class="hero-conteudo">
+                    <h1>Escola Municipal Dom Bosco</h1>
+                    <p>Uma história de fé, solidariedade e educação</p>
+                    <a href="#quemsomos" class="btn-saiba-mais">Conheça nossa história</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="comunicados" class="secao-cinza">
-        <div class="container">
-            <h2>Avisos e Bilhetes Gerais</h2>
-            <p>Fique por dentro das comunicações semanais da escola.</p>
-
-            <div class="grid-avisos">
-                <div class="card-aviso" onclick="abrirAvisoGeral()" style="cursor: pointer;">
-                    <span class="data-aviso" id="dataGeral">Carregando...</span>
-                    <h3 id="tituloGeral">Carregando...</h3>
-                    <p>Clique aqui para ler o comunicado completo.</p>
-                    <small style="color: var(--cor-primaria); font-weight: bold;">Ver mais +</small>
+        <section id="quemsomos" class="secao">
+            <div class="container">
+                <h2>Quem Somos</h2>
+                <p class="sobre-paragrafo">
+                    Uma escola de Ensino Fundamental da rede municipal de Belo Horizonte, comprometida com a formação
+                    integral de nossos alunos.
+                </p>
+                <div class="diretoria">
+                    <p><strong>Diretora:</strong> Anna Eliza Oliveira</p>
+                    <p><strong>Vice:</strong> Zayran Teixeira</p>
+                    <p><strong>Coordenadora Geral:</strong> Lívia Resende</p>
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="avisos" class="secao-cinza">
-        <div class="container">
-            <h2>Bilhetes por Turma</h2>
-            <p>Selecione a turma para visualizar as comunicações diárias.</p>
+        </section>
 
-            <div class="container-turno">
-                <h3 class="titulo-turno">☀️ Turno da Manhã</h3>
-                <div class="grid-turmas">
-                    <button class="btn-turma" onclick="abrirLogin('406')">406</button>
-                    <button class="btn-turma" onclick="abrirLogin('407')">407</button>
-                    <button class="btn-turma" onclick="abrirLogin('415')">415</button>
-
-                    <button class="btn-turma" onclick="abrirLogin('416')">416</button>
-                    <button class="btn-turma" onclick="abrirLogin('512')">512</button>
-                    <button class="btn-turma" onclick="abrirLogin('513')">513</button>
-
-                    <button class="btn-turma" onclick="abrirLogin('514')">514</button>
-                    <button class="btn-turma" onclick="abrirLogin('601')">601</button>
-                    <button class="btn-turma" onclick="abrirLogin('602')">602</button>
-
-                    <button class="btn-turma" onclick="abrirLogin('603')">603</button>
-                    <button class="btn-turma" onclick="abrirLogin('704')">704</button>
-                    <button class="btn-turma" onclick="abrirLogin('705')">705</button>
-
-                    <button class="btn-turma" onclick="abrirLogin('809')">809</button>
-                    <button class="btn-turma" onclick="abrirLogin('811')">811</button>
-                    <button class="btn-turma" onclick="abrirLogin('908')">908</button>
-                    <button class="btn-turma" onclick="abrirLogin('910')">910</button>
+        <section id="servicos" class="secao-cinza">
+            <div class="container">
+                <h2>Nossos Serviços</h2>
+                <div class="grid-servicos">
+                    <div class="card">
+                        <div class="card-icone">📚</div>
+                        <h3>Ensino Fundamental</h3>
+                        <p>Foco na excelência acadêmica e desenvolvimento humano.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icone">💻</div>
+                        <h3>Laboratório de informática</h3>
+                        <p>Espaço equipado para o desenvolvimento do pensamento computacional e inclusão digital.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icone">📖</div>
+                        <h3>Biblioteca</h3>
+                        <p>Um vasto acervo para incentivar a leitura e apoiar pesquisas acadêmicas.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icone">🎭</div>
+                        <h3>Auditório Multiuso</h3>
+                        <p>Ambiente para palestras e eventos que integram a escola e a comunidade.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icone">🏀</div>
+                        <h3>Escola Integrada</h3>
+                        <p>Atividades complementares que integram e educam.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icone">🤝</div>
+                        <h3>Projetos Sociais</h3>
+                        <p>Ações de solidariedade que transformam a comunidade.</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="container-turno">
-                <h3 class="titulo-turno">🌤️ Turno da Tarde</h3>
-                <div class="grid-turmas">
-                    <button class="btn-turma" onclick="abrirLogin('112')">112</button>
-                    <button class="btn-turma" onclick="abrirLogin('113')">113</button>
-                    <button class="btn-turma" onclick="abrirLogin('114')">114</button>
-
-                    <button class="btn-turma" onclick="abrirLogin('205')">205</button>
-                    <button class="btn-turma" onclick="abrirLogin('206')">206</button>
-                    <button class="btn-turma" onclick="abrirLogin('207')">207</button>
-
-                    <button class="btn-turma" onclick="abrirLogin('304')">304</button>
-                    <button class="btn-turma" onclick="abrirLogin('315')">315</button>
-                    <button class="btn-turma" onclick="abrirLogin('316')">316</button>
-
-                    <button class="btn-turma" onclick="abrirLogin('601 (Tarde)')">601</button>
-                    <button class="btn-turma" onclick="abrirLogin('602 (Tarde)')">602</button>
-                    <button class="btn-turma" onclick="abrirLogin('709')">709</button>
-                    <button class="btn-turma" onclick="abrirLogin('710')">710</button>
-                    <button class="btn-turma" onclick="abrirLogin('803')">803</button>
-                    <button class="btn-turma" onclick="abrirLogin('908 (Tarde)')">908</button>
-                    <button class="btn-turma" onclick="abrirLogin('911')">911</button>
+        <section id="comunicados" class="secao-cinza">
+            <div class="container">
+                <h2>Avisos e Bilhetes Gerais</h2>
+                <p>Fique por dentro das comunicações semanais da escola.</p>
+                <div class="grid-avisos">
+                    <div class="card-aviso" onclick="abrirAvisoGeral()" style="cursor: pointer;">
+                        <span class="data-aviso" id="dataGeral">Carregando...</span>
+                        <h3 id="tituloGeral">Carregando...</h3>
+                        <p>Clique aqui para ler o comunicado completo.</p>
+                        <small style="color: var(--cor-primaria); font-weight: bold;">Ver mais +</small>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    </div>
-    </section>
+        <section id="avisos" class="secao-cinza">
+            <div class="container">
+                <h2>Bilhetes por Turma</h2>
+                <p>Selecione a turma para visualizar as comunicações diárias.</p>
+
+                <div class="container-turno">
+                    <h3 class="titulo-turno">☀️ Turno da Manhã</h3>
+                    <div class="grid-turmas">
+                        <button class="btn-turma" onclick="abrirLogin('406')">406</button>
+                        <button class="btn-turma" onclick="abrirLogin('407')">407</button>
+                        <button class="btn-turma" onclick="abrirLogin('415')">415</button>
+                        <button class="btn-turma" onclick="abrirLogin('416')">416</button>
+                        <button class="btn-turma" onclick="abrirLogin('512')">512</button>
+                        <button class="btn-turma" onclick="abrirLogin('513')">513</button>
+                        <button class="btn-turma" onclick="abrirLogin('514')">514</button>
+                        <button class="btn-turma" onclick="abrirLogin('601')">601</button>
+                        <button class="btn-turma" onclick="abrirLogin('602')">602</button>
+                        <button class="btn-turma" onclick="abrirLogin('603')">603</button>
+                        <button class="btn-turma" onclick="abrirLogin('704')">704</button>
+                        <button class="btn-turma" onclick="abrirLogin('705')">705</button>
+                        <button class="btn-turma" onclick="abrirLogin('809')">809</button>
+                        <button class="btn-turma" onclick="abrirLogin('811')">811</button>
+                        <button class="btn-turma" onclick="abrirLogin('908')">908</button>
+                        <button class="btn-turma" onclick="abrirLogin('910')">910</button>
+                    </div>
+                </div>
+
+                <div class="container-turno">
+                    <h3 class="titulo-turno">🌤️ Turno da Tarde</h3>
+                    <div class="grid-turmas">
+                        <button class="btn-turma" onclick="abrirLogin('112')">112</button>
+                        <button class="btn-turma" onclick="abrirLogin('113')">113</button>
+                        <button class="btn-turma" onclick="abrirLogin('114')">114</button>
+                        <button class="btn-turma" onclick="abrirLogin('205')">205</button>
+                        <button class="btn-turma" onclick="abrirLogin('206')">206</button>
+                        <button class="btn-turma" onclick="abrirLogin('207')">207</button>
+                        <button class="btn-turma" onclick="abrirLogin('304')">304</button>
+                        <button class="btn-turma" onclick="abrirLogin('315')">315</button>
+                        <button class="btn-turma" onclick="abrirLogin('316')">316</button>
+                        <button class="btn-turma" onclick="abrirLogin('601 (Tarde)')">601</button>
+                        <button class="btn-turma" onclick="abrirLogin('602 (Tarde)')">602</button>
+                        <button class="btn-turma" onclick="abrirLogin('709')">709</button>
+                        <button class="btn-turma" onclick="abrirLogin('710')">710</button>
+                        <button class="btn-turma" onclick="abrirLogin('803')">803</button>
+                        <button class="btn-turma" onclick="abrirLogin('908 (Tarde)')">908</button>
+                        <button class="btn-turma" onclick="abrirLogin('911')">911</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <div id="modalBilhetes" class="modal">
         <div class="modal-conteudo">
             <span class="fechar" onclick="fecharModal()">&times;</span>
             <h2 id="tituloTurma">Turma 000</h2>
-            <p class="sub-aviso">Confira os avisos e bilhetes diários abaixo:</p>
 
-            <div id="listaBilhetes" class="lista-avisos">
+            <div id="areaLogin">
+                <p class="sub-aviso">Esta área é restrita. Digite a senha da turma:</p>
+                <input type="password" id="campoSenha" placeholder="Senha de 3 dígitos">
+                <button class="btn-portal" id="btnConfirmarSenha">Entrar</button>
+                <p id="mensagemErro" style="color: #ff0000; font-size: 0.8rem; margin-top: 10px; display: none;">
+                    Senha incorreta, tente novamente!
+                </p>
+            </div>
+
+            <div id="areaConteudo" style="display: none;">
+                <p class="sub-aviso">Confira os avisos e bilhetes diários abaixo:</p>
+                <div id="listaBilhetes" class="lista-avisos"></div>
             </div>
         </div>
     </div>
-
 
     <footer class="rodape">
         <div class="container container-rodape">
@@ -193,16 +191,15 @@
                 <p>Educação de qualidade e compromisso com o futuro da nossa comunidade.</p>
             </div>
 
-            <div class="rodape-contatos">
+            <div class="rodape-contatos" id="contatos">
                 <h4>Contatos</h4>
                 <ul>
                     <li><strong>📞 Telefone:</strong> <a href="tel:31988883295">(31) 98888-3295</a></li>
                     <li><strong>✉️ E-mail:</strong> <a href="mailto:emdb@edu.pbh.gov.br">emdb@edu.pbh.gov.br</a></li>
                     <li>
                         <strong>📍 Endereço:</strong>
-                        <a href="https://www.google.com/maps/search/?api=1&query=Escola+Municipal+Dom+Bosco+Rua+Bicuiba+100+Belo+Horizonte"
-                            target="_blank" rel="noopener noreferrer">
-                            Rua Bicuíba, 100 – Dom Bosco, Belo Horizonte - MG
+                        <a href="https://maps.google.com/?q=Rua+Bicuíba,100,Dom+Bosco,Belo+Horizonte" target="_blank">
+                            Rua Bicuíba, 100 – Dom Bosco, BH - MG
                         </a>
                     </li>
                 </ul>
@@ -212,31 +209,26 @@
                 <h4>Siga nossos canais</h4>
                 <div class="icones-sociais">
                     <a href="https://www.facebook.com/people/Escola-Municipal-Dom-Bosco/100057627992665/"
-                        target="_blank" rel="noopener noreferrer" title="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-
-                    <a href="https://www.instagram.com/emdb.bh/" target="_blank" rel="noopener noreferrer"
-                        title="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-
-                    <a href="https://wa.me/5531988883295" target="_blank" rel="noopener noreferrer" title="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
+                        target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/emdb.bh/" target="_blank" title="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5531988883295" target="_blank" title="WhatsApp"><i
+                            class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
-            <div class="direitos-autorais">
-                <div class="container">
-                    <p>&copy; 2026 Escola Municipal Dom Bosco. Todos os direitos reservados.</p>
-                    <p class="dev-credito">Desenvolvido por <strong>Davi Bicalho de Lima</strong></p>
-                </div>
+        </div>
+
+        <div class="direitos-autorais">
+            <div class="container">
+                <p>&copy; 2026 Escola Municipal Dom Bosco. Todos os direitos reservados.</p>
+                <p class="dev-credito">Desenvolvido por <strong>Davi Bicalho de Lima</strong></p>
             </div>
+        </div>
     </footer>
+
     <button id="btnTopo" onclick="voltarAoTopo()" title="Voltar ao Topo">
         <i class="fas fa-arrow-up"></i>
     </button>
-
 
 </body>
 

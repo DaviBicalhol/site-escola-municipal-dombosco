@@ -1,52 +1,87 @@
-// banco de dados de bilhetes 
-// Para mudar um aviso, basta alterar o texto entre as aspas.
+// ============================================================
+// 1. BANCO DE DADOS DE BILHETES (COM SENHAS)
+// ============================================================
 const bancoDeAvisos = {
     // --- TURNO DA MANHÃ ---
-    "406": { data: "26/01/2026", texto: "Não esquecer o livro de matemática amanhã." },
-    "407": { data: "26/01/2026", texto: "Avisos para a turma 407 aparecerão aqui." },
-    "415": { data: "26/01/2026", texto: "Nenhum aviso para hoje." },
-    "416": { data: "26/01/2026", texto: "Nenhum aviso para hoje." },
-    "512": { data: "26/01/2026", texto: "Nenhum aviso para hoje." },
-    "513": { data: "26/01/2026", texto: "Nenhum aviso para hoje." },
-    "514": { data: "26/01/2026", texto: "Nenhum aviso para hoje." },
-    "601": { data: "26/01/2026", texto: "Estudar para a prova de amanhã." },
-    "602": { data: "26/01/2026", texto: "Nenhum aviso para hoje." },
-    "603": { data: "26/01/2026", texto: "Nenhum aviso para hoje." },
-    "704": { data: "26/01/2026", texto: "Nenhum aviso para hoje." },
-    "705": { data: "26/01/2026", texto: "Nenhum aviso para hoje." },
-    "809": { data: "26/01/2026", texto: "Nenhum aviso para hoje." },
-    "811": { data: "26/01/2026", texto: "Nenhum aviso para hoje." },
-    "908": { data: "26/01/2026", texto: "Nenhum aviso para hoje." },
-    "910": { data: "26/01/2026", texto: "Nenhum aviso para hoje." },
+    "406": { data: "26/01/2026", texto: "Não esquecer o livro de matemática amanhã.", senha: "604" },
+    "407": { data: "26/01/2026", texto: "Avisos para a turma 407 aparecerão aqui.", senha: "407" },
+    "415": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "415" },
+    "416": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "416" },
+    "512": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "512" },
+    "513": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "513" },
+    "514": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "514" },
+    "601": { data: "26/01/2026", texto: "Estudar para a prova de amanhã.", senha: "601" },
+    "602": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "602" },
+    "603": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "603" },
+    "704": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "704" },
+    "705": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "705" },
+    "809": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "809" },
+    "811": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "811" },
+    "908": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "908" },
+    "910": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "910" },
 
     // --- TURNO DA TARDE ---
-    "112": { data: "26/01/2026", texto: "Trazer lanche saudável para a oficina." },
-    "113": { data: "26/01/2026", texto: "Nenhum aviso para hoje." },
-    "114": { data: "26/01/2026", texto: "Nenhum aviso para hoje." },
-    "205": { data: "26/01/2026", texto: "Nenhum aviso para hoje." },
-    "206": { data: "26/01/2026", texto: "Nenhum aviso para hoje." },
-    "207": { data: "26/01/2026", texto: "Nenhum aviso para hoje." },
-    "304": { data: "26/01/2026", texto: "Nenhum aviso para hoje." },
-    "315": { data: "26/01/2026", texto: "Nenhum aviso para hoje." },
-    "316": { data: "26/01/2026", texto: "Nenhum aviso para hoje." },
-    "601 (Tarde)": { data: "26/01/2026", texto: "Trazer autorização para o passeio." },
-    "602 (Tarde)": { data: "26/01/2026", texto: "Nenhum aviso para hoje." },
-    "709": { data: "26/01/2026", texto: "Nenhum aviso para hoje." },
-    "710": { data: "26/01/2026", texto: "Nenhum aviso para hoje." },
-    "803": { data: "26/01/2026", texto: "Nenhum aviso para hoje." },
-    "908 (Tarde)": { data: "26/01/2026", texto: "Nenhum aviso para hoje." },
-    "911": { data: "26/01/2026", texto: "Nenhum aviso para hoje." }
+    "112": { data: "26/01/2026", texto: "Trazer lanche saudável para a oficina.", senha: "112" },
+    "113": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "113" },
+    "114": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "114" },
+    "205": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "205" },
+    "206": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "206" },
+    "207": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "207" },
+    "304": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "304" },
+    "315": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "315" },
+    "316": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "316" },
+    "601 (Tarde)": { data: "26/01/2026", texto: "Trazer autorização para o passeio.", senha: "601" },
+    "602 (Tarde)": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "602" },
+    "709": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "709" },
+    "710": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "710" },
+    "803": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "803" },
+    "908 (Tarde)": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "908" },
+    "911": { data: "26/01/2026", texto: "Nenhum aviso para hoje.", senha: "911" }
 };
+
+// Variável global para saber qual turma está tentando logar
+let turmaAtual = "";
+
+// ============================================================
+// 2. LÓGICA DO MODAL E LOGIN DE TURMAS
+// ============================================================
+
 function abrirLogin(idTurma) {
+    turmaAtual = idTurma;
     const modal = document.getElementById('modalBilhetes');
-    const titulo = document.getElementById('tituloTurma');
-    const lista = document.getElementById('listaBilhetes');
+    const campoSenha = document.getElementById('campoSenha');
+    const msgErro = document.getElementById('mensagemErro');
 
-    titulo.innerText = "Turma " + idTurma;
+    // Reseta o estado do modal ao abrir
+    document.getElementById('areaLogin').style.display = "block";
+    document.getElementById('areaConteudo').style.display = "none";
+    
+    // Limpa senha e erros anteriores
+    campoSenha.value = ""; 
+    campoSenha.classList.remove('input-erro');
+    msgErro.style.display = "none";
+    
+    document.getElementById('tituloTurma').innerText = "Acesso - Turma " + idTurma;
+    modal.style.display = "block";
 
-    const dadosDaTurma = bancoDeAvisos[idTurma];
+    setTimeout(() => campoSenha.focus(), 100);
+}
 
-    if (dadosDaTurma) {
+function validarSenha() {
+    const campoSenha = document.getElementById('campoSenha');
+    const senhaDigitada = campoSenha.value;
+    const msgErro = document.getElementById('mensagemErro');
+    const dadosDaTurma = bancoDeAvisos[turmaAtual];
+
+    if (dadosDaTurma && senhaDigitada === dadosDaTurma.senha) {
+        // Sucesso
+        document.getElementById('areaLogin').style.display = "none";
+        document.getElementById('areaConteudo').style.display = "block";
+        msgErro.style.display = "none";
+        campoSenha.classList.remove('input-erro');
+        
+        // Carrega o conteúdo
+        const lista = document.getElementById('listaBilhetes');
         lista.innerHTML = `
             <div class="bilhete-item">
                 <small>Publicado em: ${dadosDaTurma.data}</small>
@@ -54,16 +89,51 @@ function abrirLogin(idTurma) {
             </div>
         `;
     } else {
-        lista.innerHTML = `
-            <div class="bilhete-item">
-                <p>Não há avisos registrados para hoje.</p>
-            </div>
-        `;
+        // ERRO: Em vez de alert, usamos o estilo visual
+        msgErro.style.display = "block";
+        campoSenha.classList.add('input-erro');
+        campoSenha.value = ""; // Limpa para nova tentativa
+        campoSenha.focus();
     }
-    modal.style.display = "block";
 }
 
-// Objeto para facilitar a troca semanal do aviso geral
+// Configuração de eventos após carregar o DOM
+document.addEventListener('DOMContentLoaded', function() {
+    const btnConfirmar = document.getElementById('btnConfirmarSenha');
+    const campoSenha = document.getElementById('campoSenha');
+
+    if (btnConfirmar) {
+        btnConfirmar.addEventListener('click', validarSenha);
+    }
+
+    // Permite apertar ENTER para confirmar a senha
+    if (campoSenha) {
+        campoSenha.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                validarSenha();
+            }
+        });
+    }
+
+    // Carrega o aviso geral da semana
+    carregarAvisoNoCard();
+});
+
+function fecharModal() {
+    document.getElementById('modalBilhetes').style.display = "none";
+}
+
+// Fecha o modal ao clicar fora da caixa branca
+window.onclick = function(event) {
+    const modal = document.getElementById('modalBilhetes');
+    if (event.target == modal) {
+        fecharModal();
+    }
+};
+
+// ============================================================
+// 3. AVISO GERAL DA SEMANA
+// ============================================================
 const avisoGeralSemana = {
     titulo: "Escola nas Férias",
     data: "26 à 28 Jan 2026",
@@ -71,14 +141,25 @@ const avisoGeralSemana = {
 };
 
 function carregarAvisoNoCard() {
-    document.getElementById('dataGeral').innerText = avisoGeralSemana.data;
-    document.getElementById('tituloGeral').innerText = avisoGeralSemana.titulo;
+    const dataGeral = document.getElementById('dataGeral');
+    const tituloGeral = document.getElementById('tituloGeral');
+    
+    if(dataGeral && tituloGeral) {
+        dataGeral.innerText = avisoGeralSemana.data;
+        tituloGeral.innerText = avisoGeralSemana.titulo;
+    }
 }
 
 function abrirAvisoGeral() {
     const modal = document.getElementById('modalBilhetes');
     const titulo = document.getElementById('tituloTurma');
     const lista = document.getElementById('listaBilhetes');
+    const areaLogin = document.getElementById('areaLogin');
+    const areaConteudo = document.getElementById('areaConteudo');
+
+    // Avisos GERAIS não precisam de senha
+    areaLogin.style.display = "none";
+    areaConteudo.style.display = "block";
 
     titulo.innerText = avisoGeralSemana.titulo;
     lista.innerHTML = `
@@ -90,37 +171,22 @@ function abrirAvisoGeral() {
     modal.style.display = "block";
 }
 
-carregarAvisoNoCard();
-
-// 3. FUNÇÕES DE APOIO (Fechar o Modal)
-function fecharModal() {
-    document.getElementById('modalBilhetes').style.display = "none";
-}
-
-window.onclick = function(event) {
-    const modal = document.getElementById('modalBilhetes');
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-// botao para voltar ao topo
+// ============================================================
+// 4. NAVEGAÇÃO (VOLTAR AO TOPO)
+// ============================================================
 const botaoTopo = document.getElementById("btnTopo");
 
-// Mostrar botao apos 300px
-window.onscroll = function() {
+window.addEventListener('scroll', function() {
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        botaoTopo.style.display = "block";
+        if (botaoTopo) botaoTopo.style.display = "block";
     } else {
-        botaoTopo.style.display = "none";
+        if (botaoTopo) botaoTopo.style.display = "none";
     }
-};
+});
 
-// Função para voltar ao topo suavemente
 function voltarAoTopo() {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
     });
 }
-
