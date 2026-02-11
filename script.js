@@ -256,10 +256,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Array de objetos com os eventos da escola
     const eventos = [
-        { data: '2026-02-15', titulo: 'Início das Aulas - 1º Semestre' },
-        { data: '2026-02-28', titulo: 'Reunião de Pais e Mestres' },
-        { data: '2026-03-10', titulo: 'Entrega de Materiais Didáticos' },
-        { data: '2026-03-25', titulo: 'Feriado Municipal' }
+        { data: '2026-02-16', titulo: 'Recesso escolar até o dia 18/02' },
+        { data: '2026-02-28', titulo: 'Assembleia Escolar' },
+        { data: '2026-03-10', titulo: 'Avaliações mensais 10/03 até 20/03' },
+        { data: '2026-04-13', titulo: 'Avaliação trimestral 13/03 até 17/03' }
     ];
 
     const hoje = new Date();

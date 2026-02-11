@@ -573,6 +573,12 @@ body {
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
 }
+#quemsomos {
+    position: relative;
+    z-index: 10;
+    background-color: #fff;
+    margin-top: 0; /* Garante que não haja espaço entre o banner e o texto */
+}
 
 .slide-foto.active {
     opacity: 1;
