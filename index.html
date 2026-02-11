@@ -42,12 +42,22 @@
                 </div>
             </div>
         </section>
+        <div class="banner-escola">
+            <img src="imagemfrenteescola.png" class="slide-foto active" alt="Frente da Escola">
+            <img src="biblioteca emdb.jpg" class="slide-foto" alt="Interior da Escola">
+
+            <div class="dots-container">
+                <span class="dot active" onclick="irParaSlide(0)"></span>
+                <span class="dot" onclick="irParaSlide(1)"></span>
+            </div>
+        </div>
 
         <section id="quemsomos" class="secao">
             <div class="container">
                 <h2>Quem Somos</h2>
                 <p class="sobre-paragrafo">
-                    Uma escola de Ensino Fundamental da rede municipal de Belo Horizonte, comprometida com a formação
+                    Uma escola de Ensino Fundamental da rede municipal de Belo Horizonte, fundada em 2007, comprometida
+                    com a formação e educação
                     integral de nossos alunos.
                 </p>
                 <div class="diretoria">
@@ -65,7 +75,7 @@
                     <div class="card">
                         <div class="card-icone">📚</div>
                         <h3>Ensino Fundamental</h3>
-                        <p>Foco na excelência acadêmica e desenvolvimento humano.</p>
+                        <p>Foco na excelência acadêmica e desenvolvimento humano. 1° ao 9° ano.</p>
                     </div>
                     <div class="card">
                         <div class="card-icone">💻</div>
@@ -95,18 +105,12 @@
                 </div>
             </div>
         </section>
-
-        <section id="comunicados" class="secao-cinza">
+        <section id="calendario" class="secao">
             <div class="container">
-                <h2>Avisos e Bilhetes Gerais</h2>
-                <p>Fique por dentro das comunicações semanais da escola.</p>
-                <div class="grid-avisos">
-                    <div class="card-aviso" onclick="abrirAvisoGeral()" style="cursor: pointer;">
-                        <span class="data-aviso" id="dataGeral">Carregando...</span>
-                        <h3 id="tituloGeral">Carregando...</h3>
-                        <p>Clique aqui para ler o comunicado completo.</p>
-                        <small style="color: var(--cor-primaria); font-weight: bold;">Ver mais +</small>
-                    </div>
+                <h2>Calendário de Eventos</h2>
+                <p>Fique atento às datas importantes do nosso ano letivo.</p>
+
+                <div class="calendario-grade" id="lista-eventos">
                 </div>
             </div>
         </section>

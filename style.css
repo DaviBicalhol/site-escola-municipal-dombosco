@@ -3,11 +3,10 @@
    ============================================================ */
 :root {
     --cor-primaria: #23ad11;
-    /* Verde Institucional */
     --cor-primaria-clara: #f1f8e9;
     --cor-secundaria: #ffd700;
-    /* Amarelo de destaque */
     --fonte-principal: 'Montserrat', sans-serif;
+    
 }
 
 * {
@@ -87,7 +86,6 @@ body {
    3. HERO SECTION (BANNER)
    ============================================================ */
 .hero {
-    background-image: url('imagemfrenteescola.png');
     background-size: cover;
     background-position: center;
     height: 80vh;
@@ -95,6 +93,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .hero-overlay {
@@ -530,15 +529,15 @@ body {
     }
 }
 
-/* Classe para destacar o erro no campo de texto */
+
 .input-erro {
     border-color: #ff0000 !important;
     background-color: #fff0f0;
     animation: shake 0.3s;
-    /* Pequeno tremor para chamar atenção */
+    
 }
 
-/* Animação opcional de tremor (Shake) */
+
 @keyframes shake {
 
     0%,
@@ -554,3 +553,89 @@ body {
         transform: translateX(5px);
     }
 }
+.banner-escola {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; 
+    z-index: -1;  
+    overflow: hidden;
+}
+
+.slide-foto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.slide-foto.active {
+    opacity: 1;
+}
+.dots-container {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 5;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dot.active {
+    background: var(--cor-primaria); /* Alterado de --accent-color para --cor-primaria */
+    transform: scale(1.2);
+}
+.calendario-grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.evento-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #ddd; /* Padrão neutro */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: left;
+    transition: 0.3s;
+}
+
+/* Classe para destacar eventos que acontecem nos próximos 7 dias */
+.evento-proximo {
+    border-left-color: var(--cor-primaria);
+    background-color: var(--cor-primaria-clara);
+    transform: scale(1.02);
+}
+
+.evento-data {
+    display: block;
+    font-weight: bold;
+    color: var(--cor-primaria);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.evento-titulo {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 700;
+}
+
+    
